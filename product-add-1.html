@@ -19,7 +19,7 @@
                 <li class="controls__item has-submenu has-select">
                     ASOSRUSSIA
                     <div class="sub-menu">
-                        <button class="add-company">Добавить компанию</button>
+                        <button class="add-company"><a href="company-add.html">Добавить компанию</a></button>
                         <ul class="companies">
                             <li class="companies__item selected">
                                 <a href="">
@@ -46,7 +46,7 @@
                                 <a href="">Управляющий</a>
                             </div>
                         </div>
-                        <a class="controls__sub-item" href="">
+                        <a class="controls__sub-item" href="settings.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z"></path><path fill="currentColor" d="M11.31 1a3 3 0 0 0-2.985 2.701l-.026.264a1 1 0 0 1-1.407.812l-.241-.109a3 3 0 0 0-3.832 1.234l-.69 1.196a3 3 0 0 0 .847 3.936l.215.154a1 1 0 0 1 0 1.624l-.215.155a3 3 0 0 0-.847 3.935l.69 1.196a3 3 0 0 0 3.832 1.234l.241-.109a1 1 0 0 1 1.407.812l.026.264A3 3 0 0 0 11.31 23h1.38a3 3 0 0 0 2.985-2.701l.026-.264a1 1 0 0 1 1.407-.812l.241.11a3 3 0 0 0 3.832-1.235l.69-1.195a3 3 0 0 0-.847-3.936l-.215-.155a1 1 0 0 1 0-1.624l.215-.154a3 3 0 0 0 .847-3.936l-.69-1.196a3 3 0 0 0-3.832-1.234l-.241.109a1 1 0 0 1-1.407-.812l-.026-.264A3 3 0 0 0 12.69 1h-1.38Zm-.995 2.9a1 1 0 0 1 .995-.9h1.38a1 1 0 0 1 .995.9l.026.264a3 3 0 0 0 4.22 2.436l.24-.109a1 1 0 0 1 1.278.412l.69 1.195a1 1 0 0 1-.282 1.312l-.215.154a3 3 0 0 0 0 4.872l.215.155a1 1 0 0 1 .282 1.312l-.69 1.195a1 1 0 0 1-1.277.411l-.242-.109a3 3 0 0 0-4.219 2.436l-.026.264a1 1 0 0 1-.995.9h-1.38a1 1 0 0 1-.995-.9l-.026-.264a3 3 0 0 0-4.22-2.436l-.241.11a1 1 0 0 1-1.277-.412l-.69-1.195a1 1 0 0 1 .282-1.313l.215-.154a3 3 0 0 0 0-4.872l-.215-.154a1 1 0 0 1-.282-1.312l.69-1.196a1 1 0 0 1 1.277-.411l.241.109a3 3 0 0 0 4.22-2.436l.026-.263Z"></path></svg>
                             <span>Настройки</span>    
                         </a>
@@ -57,7 +57,7 @@
                     </div>
                 </li>
                 <li class="controls__item">
-                    <a href=""><img src="img/chat.svg" alt=""></a>
+                    <a href="messages.html"><img src="img/chat.svg" alt=""></a>
                     <span class="counter">1</span>
                 </li>
                 <li class="controls__item">
@@ -67,6 +67,11 @@
                     <a href=""><img src="img/education.svg" alt=""></a>
                 </li>
             </ul>
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav class="header-nav">
             <li class="header-nav__item selected">
@@ -97,7 +102,7 @@
                             </ul>
                             <ul class="sub-menu__list">
                                 <li class="sub-menu__item">
-                                    <a href="product-add.html">Добавить товар</a>
+                                    <a href="product-add-1.html">Добавить товар</a>
                                 </li>
                             </ul>
                         </div>
@@ -138,6 +143,21 @@
     </header>
     <main>
         <form class="product-form" action="">
+            <header class="product-form__header">
+                <div class="product-form__title"> Создание товара </div>
+                <nav class="product-form__steps">
+                    <a class="product-form__step success" href="">
+                        <span>1</span>
+                        <span class="product-form__step-name"> Карточка товара </span>
+                    </a>
+                    <a class="product-form__step" href="">
+                        <span>2</span>
+                    </a>
+                    <a class="product-form__step" href="">
+                        <span>3</span>
+                    </a>
+                </nav>
+            </header>
             <h4 class="hint"><span class="required"></span> - обязательные поля </h4>
             <div class="product-form__section">
                 <h3 class="product-form__h3 required">Категория товара</h3>
@@ -211,7 +231,31 @@
                     </div>
                 </div>
             </div>
-            <button class="button" style="margin-top: 15px;">Сохранить</button>
+            <div class="product-form__section">
+                <h3 class="product-form__h3"> Код ОКПД2 </h3>
+                <select class="select" name="" id="">
+                    <option value="" selected disabled hidden>Введите название или код в формате XX.XX.XX.XXX</option>
+                    <option value="">Test1</option>
+                    <option value="">Test2</option>
+                </select>
+            </div>
+            <div class="product-form__section">
+                <h3 class="product-form__h3"> Размерная сетка (НЕОБЯЗАТЕЛЬНО)</h3>
+                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="product-form__section">
+                <h3 class="product-form__h3"> Состав (НЕОБЯЗАТЕЛЬНО)</h3>
+                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="product-form__section">
+                <h3 class="product-form__h3"> Инструкция по уходу и эксплуатации (НЕОБЯЗАТЕЛЬНО)</h3>
+                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="product-form__section">
+                <h3 class="product-form__h3"> Сертификаты (НЕОБЯЗАТЕЛЬНО)</h3>
+                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button class="button" style="margin-top: 15px;">Далее</button>
         </form>
     </main>
     <footer class="footer">

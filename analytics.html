@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datepicker.material.css">
 </head>
 <body>
     <header class="header">
@@ -17,7 +18,7 @@
                 <li class="controls__item has-submenu has-select">
                     ASOSRUSSIA
                     <div class="sub-menu">
-                        <button class="add-company">Добавить компанию</button>
+                        <button class="add-company"><a href="company-add.html">Добавить компанию</a></button>
                         <ul class="companies">
                             <li class="companies__item selected">
                                 <a href="">
@@ -44,7 +45,7 @@
                                 <a href="">Управляющий</a>
                             </div>
                         </div>
-                        <a class="controls__sub-item" href="">
+                        <a class="controls__sub-item" href="settings.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z"></path><path fill="currentColor" d="M11.31 1a3 3 0 0 0-2.985 2.701l-.026.264a1 1 0 0 1-1.407.812l-.241-.109a3 3 0 0 0-3.832 1.234l-.69 1.196a3 3 0 0 0 .847 3.936l.215.154a1 1 0 0 1 0 1.624l-.215.155a3 3 0 0 0-.847 3.935l.69 1.196a3 3 0 0 0 3.832 1.234l.241-.109a1 1 0 0 1 1.407.812l.026.264A3 3 0 0 0 11.31 23h1.38a3 3 0 0 0 2.985-2.701l.026-.264a1 1 0 0 1 1.407-.812l.241.11a3 3 0 0 0 3.832-1.235l.69-1.195a3 3 0 0 0-.847-3.936l-.215-.155a1 1 0 0 1 0-1.624l.215-.154a3 3 0 0 0 .847-3.936l-.69-1.196a3 3 0 0 0-3.832-1.234l-.241.109a1 1 0 0 1-1.407-.812l-.026-.264A3 3 0 0 0 12.69 1h-1.38Zm-.995 2.9a1 1 0 0 1 .995-.9h1.38a1 1 0 0 1 .995.9l.026.264a3 3 0 0 0 4.22 2.436l.24-.109a1 1 0 0 1 1.278.412l.69 1.195a1 1 0 0 1-.282 1.312l-.215.154a3 3 0 0 0 0 4.872l.215.155a1 1 0 0 1 .282 1.312l-.69 1.195a1 1 0 0 1-1.277.411l-.242-.109a3 3 0 0 0-4.219 2.436l-.026.264a1 1 0 0 1-.995.9h-1.38a1 1 0 0 1-.995-.9l-.026-.264a3 3 0 0 0-4.22-2.436l-.241.11a1 1 0 0 1-1.277-.412l-.69-1.195a1 1 0 0 1 .282-1.313l.215-.154a3 3 0 0 0 0-4.872l-.215-.154a1 1 0 0 1-.282-1.312l.69-1.196a1 1 0 0 1 1.277-.411l.241.109a3 3 0 0 0 4.22-2.436l.026-.263Z"></path></svg>
                             <span>Настройки</span>    
                         </a>
@@ -55,7 +56,7 @@
                     </div>
                 </li>
                 <li class="controls__item">
-                    <a href=""><img src="img/chat.svg" alt=""></a>
+                    <a href="messages.html"><img src="img/chat.svg" alt=""></a>
                     <span class="counter">1</span>
                 </li>
                 <li class="controls__item">
@@ -65,6 +66,11 @@
                     <a href=""><img src="img/education.svg" alt=""></a>
                 </li>
             </ul>
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav class="header-nav">
             <li class="header-nav__item selected">
@@ -95,7 +101,7 @@
                             </ul>
                             <ul class="sub-menu__list">
                                 <li class="sub-menu__item">
-                                    <a href="product-add.html">Добавить товар</a>
+                                    <a href="product-add-1.html">Добавить товар</a>
                                 </li>
                             </ul>
                         </div>
@@ -281,11 +287,11 @@
                 </header>
                 <div class="chart">
                     <canvas id="dynamic-sells"></canvas>
-                    <div class="error">
+                    <!-- <div class="error">
                         <div class="error__title">Данные отсутствуют</div>
                         <div class="error__text">За текущий период еще не было выручки</div>
                         <button class="error__btn"> Обновить </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="returns">
@@ -307,16 +313,37 @@
                     Средний чек 
                 </header>
                 <div class="average-content">
+                    <div class="form-field">
+                        <div class="field">
+                            <button class="wrapper" id="multi">
+                                <div class="pop-up">
+                                    <span class="control-input first-date">27 нояб. 2022</span>
+                                </div>
+                                <span class="separator">–</span>
+                                <div class="pop-up">
+                                    <span class="control-input last-date">27 нояб. 2022</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                     <div class="measures">
                         <div class="measure">
-                            <span class="currency-b2b">
+                            <span class="currency-b2b" style="
+                                --currencyMainColor: #303236;
+                                --currencyAdditionalColor: #94979E;
+                                --currencyFontWeight: 600;
+                                --currencyFontSize: 30px;">
                                 <em class="sum-part">0</em>
                                 <em class="currency">&nbsp;₽</em>
                             </span>
                             <div class="sub-text">за указанный период</div>
                         </div>
                         <div class="measure">
-                            <span class="currency-b2b">
+                            <span class="currency-b2b" style="
+                                --currencyMainColor: #303236;
+                                --currencyAdditionalColor: #94979E;
+                                --currencyFontWeight: 600;
+                                --currencyFontSize: 30px;">
                                 <em class="sum-part">0</em>
                                 <em class="currency">&nbsp;₽</em>
                             </span>
@@ -343,16 +370,37 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var date;
+    var multi = new Datepicker('#multi', {
+        multiple: true
+    });
+    function dateChange (id) {
+        try {
+            var dates = $(id).attr("data-value").split(',')
+            $(id).find(".first-date").text(dates[0]);
+            $(id).find(".last-date").text(dates[dates.length - 1]);
+        } catch (err) {
+            console.log("Date change error")
+        }
+    };
+    $("#multi").click(function(){
+        dateChange("#multi");
+    });
+</script>
 <script>
     const dynamics = document.getElementById('dynamic-sells');
 
     new Chart(dynamics, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['4 февр', '5 февр', '6 февр', '7 февр', '8 февр', '9 февр', '10 февр', '11 февр', '12 февр'],
         datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Всего',
+        borderColor: 'rgb(49, 50, 55)',
+        data: [500, 0, 1500, 300, 500, 1200, 500, 1000, 800],
         borderWidth: 1
         }]
     },
@@ -361,17 +409,21 @@
         y: {
             beginAtZero: true
         }
-        }
+        },
+        aspectRatio: 1|4
     }
     });
     const average = document.getElementById('average-sells');
 
     new Chart(average, {
-    type: 'line',
+    type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['1 февраля', '2 февраля', '3 февраля', '4 февраля', '5 февраля', '6 февраля'],
         datasets: [{
-        label: '# of Votes',
+        label: 'Всего',
+        backgroundColor: 'rgb(234, 237, 244)', 
+        hoverBackgroundColor: 'rgb(49, 50, 55)',
+        hoverBorderColor: 'rgb(49, 50, 55)',
         data: [12, 19, 3, 5, 2, 3],
         borderWidth: 1
         }]
@@ -381,7 +433,8 @@
         y: {
             beginAtZero: true
         }
-        }
+        },
+        aspectRatio: 1|4
     }
     });
 </script>

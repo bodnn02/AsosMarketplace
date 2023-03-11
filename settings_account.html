@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/datepicker.material.css">
 </head>
 <body>
     <header class="header">
@@ -141,73 +140,44 @@
         </nav>
     </header>
     <main>
-        <h1 class="text-h1">Список отчетов</h1>
-        <div class="report">
-            <div class="form-field">
-                <div class="field">
-                    <label class="label">Выберите период </label>
-                    <button class="wrapper" id="multi">
-                        <div class="pop-up">
-                            <span class="control-input first-date">27 нояб. 2022</span>
+        <div class="container">
+            <div class="settings-wrapper">
+                <nav class="settings-nav">
+                    <div class="title">Настройки</div>
+                    <ul class="settings-nav__list">
+                        <li class="settings-nav__list-title">Управление аккаунтом</li>
+                        <li class="settings-nav__item selected"><a href="settings.html">Учетная запись</a></li>
+                        <li class="settings-nav__item"><a href="settings_profile.html">Профиль</a></li>
+                        <li class="settings-nav__item"><a href="settings_account.html">Аккаунт</a></li>
+                    </ul>
+                    <ul class="settings-nav__list">
+                        <li class="settings-nav__list-title">Настройки магазина</li>
+                        <li class="settings-nav__item"><a href="settings_design.html">Дизайн</a></li>
+                        <li class="settings-nav__item"><a href="settings_shop.html">Настройки магазина</a></li>
+                    </ul>
+                </nav>
+                <div class="settings-content">
+                    <div class="title">Учётная запись</div>
+                    <form class="settings-form" action="">
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Кирилл" type="text">
+                            <label class="label" for="">Ваше имя</label>
                         </div>
-                        <span class="separator">–</span>
-                        <div class="pop-up">
-                            <span class="control-input last-date">27 нояб. 2022</span>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="ki***@yandex.ru" type="text">
+                            <label class="label" for="">E-mail</label>
                         </div>
-                    </button>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="+50658138" type="text">
+                            <label class="label" for="">Телефон</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" type="password">
+                            <label class="label" for="">Пароль</label>
+                        </div>
+                        <button class="settings-btn">Сохранить</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        <div class="sort-header ascending">
-                            <span> Период </span>
-                           <img src="../../img/arrow.svg" alt="">
-                        </div>
-                    </th>
-                    <th>
-                        <div class="sort-header">
-                            <span> Заказы </span>
-                           <img src="../../img/arrow.svg" alt="">
-                        </div>
-                    </th>
-                    <th>
-                        Возвраты
-                    </th>
-                    <th>
-                        Комиссия
-                    </th>
-                    <th>
-                        Доп. услуги
-                    </th>
-                    <th>
-                        Стоимость логистики
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="empty" colspan="6">Нет записей</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="pagination-table">
-            <div class="per-page">
-                <div>Кол-во строк:</div>
-                <select>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                </select>
             </div>
         </div>
     </main>
@@ -222,26 +192,5 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        var date;
-        var multi = new Datepicker('#multi', {
-            multiple: true
-        });
-        function dateChange (id) {
-            try {
-                var dates = $(id).attr("data-value").split(',')
-                $(id).find(".first-date").text(dates[0]);
-                $(id).find(".last-date").text(dates[dates.length - 1]);
-            } catch (err) {
-                console.log("Date change error")
-            }
-        };
-        $("#multi").click(function(){
-            dateChange("#multi");
-        });
-    </script>
 </body>
 </html>

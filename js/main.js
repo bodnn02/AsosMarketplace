@@ -11,3 +11,27 @@ $(".input , .vsInput").change(function (e) {
 $(".row").click(function (e) {
     $(this).parent().find(".hidden-rows").toggle();
 });
+
+$(".menu-btn").click(function (e) {
+    $(".overlay").addClass("opened");
+    $(".m-menu").addClass("opened");
+});
+$(".m-menu__item.has-sub").click(function (e) {
+    $(this).parent().children(".m-menu__header").addClass("back");
+    $(this).parent().children(".m-menu__header").text($(this).children("a").text());
+    $(this).parent().children(".m-menu__item").hide();
+    $(this).show();
+    $(this).addClass("opened");
+});
+$(".m-menu__header").click(function (e) {
+    if($(this).hasClass("back")) {
+        $(this).text("Меню");
+        $(this).removeClass("back")
+        $(this).parent().children(".m-menu__item").show();
+        $(this).parent().children(".m-menu__item").removeClass("opened");
+    } else {
+        console.log("test")
+        $(".overlay").removeClass("opened");
+        $(".m-menu").removeClass("opened");
+    }
+});

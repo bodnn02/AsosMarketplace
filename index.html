@@ -17,7 +17,7 @@
                 <li class="controls__item has-submenu has-select">
                     ASOSRUSSIA
                     <div class="sub-menu">
-                        <button class="add-company">Добавить компанию</button>
+                        <button class="add-company"><a href="company-add.html">Добавить компанию</a></button>
                         <ul class="companies">
                             <li class="companies__item selected">
                                 <a href="">
@@ -44,7 +44,7 @@
                                 <a href="">Управляющий</a>
                             </div>
                         </div>
-                        <a class="controls__sub-item" href="">
+                        <a class="controls__sub-item" href="settings.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z"></path><path fill="currentColor" d="M11.31 1a3 3 0 0 0-2.985 2.701l-.026.264a1 1 0 0 1-1.407.812l-.241-.109a3 3 0 0 0-3.832 1.234l-.69 1.196a3 3 0 0 0 .847 3.936l.215.154a1 1 0 0 1 0 1.624l-.215.155a3 3 0 0 0-.847 3.935l.69 1.196a3 3 0 0 0 3.832 1.234l.241-.109a1 1 0 0 1 1.407.812l.026.264A3 3 0 0 0 11.31 23h1.38a3 3 0 0 0 2.985-2.701l.026-.264a1 1 0 0 1 1.407-.812l.241.11a3 3 0 0 0 3.832-1.235l.69-1.195a3 3 0 0 0-.847-3.936l-.215-.155a1 1 0 0 1 0-1.624l.215-.154a3 3 0 0 0 .847-3.936l-.69-1.196a3 3 0 0 0-3.832-1.234l-.241.109a1 1 0 0 1-1.407-.812l-.026-.264A3 3 0 0 0 12.69 1h-1.38Zm-.995 2.9a1 1 0 0 1 .995-.9h1.38a1 1 0 0 1 .995.9l.026.264a3 3 0 0 0 4.22 2.436l.24-.109a1 1 0 0 1 1.278.412l.69 1.195a1 1 0 0 1-.282 1.312l-.215.154a3 3 0 0 0 0 4.872l.215.155a1 1 0 0 1 .282 1.312l-.69 1.195a1 1 0 0 1-1.277.411l-.242-.109a3 3 0 0 0-4.219 2.436l-.026.264a1 1 0 0 1-.995.9h-1.38a1 1 0 0 1-.995-.9l-.026-.264a3 3 0 0 0-4.22-2.436l-.241.11a1 1 0 0 1-1.277-.412l-.69-1.195a1 1 0 0 1 .282-1.313l.215-.154a3 3 0 0 0 0-4.872l-.215-.154a1 1 0 0 1-.282-1.312l.69-1.196a1 1 0 0 1 1.277-.411l.241.109a3 3 0 0 0 4.22-2.436l.026-.263Z"></path></svg>
                             <span>Настройки</span>    
                         </a>
@@ -55,7 +55,7 @@
                     </div>
                 </li>
                 <li class="controls__item">
-                    <a href=""><img src="img/chat.svg" alt=""></a>
+                    <a href="messages.html"><img src="img/chat.svg" alt=""></a>
                     <span class="counter">1</span>
                 </li>
                 <li class="controls__item">
@@ -65,6 +65,11 @@
                     <a href=""><img src="img/education.svg" alt=""></a>
                 </li>
             </ul>
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav class="header-nav">
             <li class="header-nav__item selected">
@@ -95,7 +100,7 @@
                             </ul>
                             <ul class="sub-menu__list">
                                 <li class="sub-menu__item">
-                                    <a href="product-add.html">Добавить товар</a>
+                                    <a href="product-add-1.html">Добавить товар</a>
                                 </li>
                             </ul>
                         </div>
@@ -241,10 +246,34 @@
                         <div class="withdraw__empty__title">Вы пока не выводили деньги</div>
                         <div class="withdraw__empty__description"> Здесь будет история исполненных <br> и в обработке выводов </div>
                     </div>
+                    <!-- <table class="table vertical">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="sort-header">
+                                        <span> Дата вывода </span>
+                                       <img src="../../img/arrow.svg" alt="">
+                                    </div>
+                                </th>
+                                <th>
+                                    Сумма
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="empty" colspan="11">Нет записей</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Дата вывода">1</td>
+                                <td data-label="Дата сумма">1</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
                 </div>
             </div>
             <h2 class="text-h2">Операции</h2>
-            <table class="table">
+            <table class="table vertical">
                 <thead>
                     <tr>
                         <th>
@@ -290,17 +319,17 @@
                         <td class="empty" colspan="11">Нет записей</td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
+                        <td data-label="Дата создания">1</td>
+                        <td data-label="Дата получения">1</td>
+                        <td data-label="№ Заказа">1</td>
+                        <td data-label="SKU">1</td>
+                        <td data-label="Наименование">1</td>
+                        <td data-label="Продано (ед.)">1</td>
+                        <td data-label="Возвраты">1</td>
+                        <td data-label="Цена">1</td>
+                        <td data-label="Себестоимость">1</td>
+                        <td data-label="К выводу">1</td>
+                        <td data-label="Комиссия">1</td>
                     </tr>
                 </tbody>
             </table>
@@ -364,6 +393,90 @@
                     </div>
                 </div>
             </div> -->
+        </div>
+        <div class="overlay">
+            <div class="container">
+                <div class="m-menu">
+                    <button class="m-menu__header">Меню</button>
+                    <div class="m-menu__item">
+                        <a class="m-menu__link" href="index.html">Главная</a>
+                    </div>
+                    <div class="m-menu__item has-sub">
+                        <a class="m-menu__link">Товары и цены</a>
+                        <div class="sub-menu">
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-all.html">Cписок всех товаров</a>
+                            </li>
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-all.html">В продаже</a>
+                            </li>
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-all.html">Не в продаже</a>
+                            </li>
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-all.html">Заблокированные</a>
+                            </li>
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-all.html">Архивные</a>
+                            </li>
+                            <li class="m-menu__item">
+                                <a class="m-menu__link" href="product-add.html">Добавить товар</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="m-menu__item has-sub">
+                        <a class="m-menu__link" href="my-finances.html">Финансы</a>
+                        <div class="sub-menu">
+                            <div class="m-menu__item">
+                                <a class="m-menu__link" href="current.html">Баланс на сегодня</a>
+                            </div>
+                            <div class="m-menu__item">
+                                <a class="m-menu__link" href="invoices.html">Список отчетов</a>
+                            </div>
+                            <div class="m-menu__item">
+                                <a class="m-menu__link" href="invoices.html">Начисления</a>
+                            </div>
+                            <div class="m-menu__item">
+                                <a class="m-menu__link" href="">Выплаты</a>
+                            </div>
+                            <div class="m-menu__item">
+                                <a class="m-menu__link" href="documents.html">Документы</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-menu__item">
+                        <a class="m-menu__link" href="analytics.html">Аналитика</a>
+                    </div>
+                    <div class="m-menu__item has-sub">
+                        <a class="m-menu__link" href="">ASOSRUSSIA</a>
+                        <div class="sub-menu">
+                            <div class="m-menu__item">
+                                <a class="m-menu__link add-company" href="company-add.html">Добавить компанию</a>
+                            </div>
+                            <div class="companies">
+                                <div class="companies__item selected">
+                                    <a href="">
+                                        <h3 class="companies__title">ASOS</h3>
+                                        <p class="companies__id">Seller ID 456564</p>
+                                    </a>
+                                </div>
+                                <div class="companies__item">
+                                    <a href="">
+                                        <h3 class="companies__title">ASOS</h3>
+                                        <p class="companies__id">Seller ID 456564</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-menu__item">
+                        <a class="m-menu__link" href="settings.html">Настройки</a>
+                    </div>
+                    <div class="m-menu__item">
+                        <a class="m-menu__link" href="">Выйти из аккаунта</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">

@@ -157,21 +157,139 @@
                     </ul>
                 </nav>
                 <div class="settings-content">
-                    <div class="title">Учётная запись</div>
+                    <div class="title">Личные данные -  Договор № 0262385 </div>
                     <form class="settings-form" action="">
-                        <div class="input-wrapper disabled filled">
-                            <input class="input" placeholder="Firstname Lastname" type="text" disabled>
-                            <label class="label" for="">Пользователь</label>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Ананичев" type="text">
+                            <label class="label required" for="">Фамилия</label>
                         </div>
-                        <div class="input-wrapper disabled filled">
-                            <input class="input" placeholder="Firstname Lastname" type="text" disabled>
-                            <label class="label" for="">Asos ID</label>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Кирилл" type="text">
+                            <label class="label required" for="">Имя</label>
                         </div>
-                        <div class="input-wrapper disabled filled">
-                            <input class="input" placeholder="50658138" type="text" disabled>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Вадимович" type="text">
+                            <label class="label required" for="">Отчество</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="" type="text">
+                            <label class="label" for="">Дата рождения</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="+50658138" type="text">
                             <label class="label" for="">Телефон</label>
                         </div>
-                        <button class="settings-btn" disabled>Сохранить</button>
+                        <h3 class="settings__h3">Данные близкого человека</h3>
+                        <p class="settings__p"> В случае необходимости экстренной связи </p>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Ананичев" type="text">
+                            <label class="label required" for="">Фамилия</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Кирилл" type="text">
+                            <label class="label required" for="">Имя</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="Вадимович" type="text">
+                            <label class="label required" for="">Отчество</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="+50658138" type="text">
+                            <label class="label" for="">Телефон</label>
+                        </div>
+                        <h3 class="settings__h3">Данные юридического лица
+                            <div class="checkbox-wrapper">
+                                <input class="checkbox" type="checkbox" name="" id="">
+                                <label for=""> Я - самозанятый (физ. лицо) </label>
+                            </div>
+                        </h3>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="51656465" type="text">
+                            <label class="label required" for="">ИНН</label>
+                        </div>
+                        <div class="inn-info">
+                            <div class="inn-info__ogrn">
+                                <div class="inn-info-text inn-info-text__title">  Наименование организации 
+                                    <div class="inn-info-text inn-info-text__value"> ИП Ананичев Кирилл Вадимович </div>
+                                </div>
+                                <div class="inn-info-text inn-info-text__title"> ОГРН / ОГРНИП 
+                                    <div class="inn-info-text inn-info-text__value"> 322169000171905 </div>
+                                </div>
+                            </div>
+                            <div class="inn-info__address">
+                                <div class="inn-info-text inn-info-text__title"> Юридический адрес 
+                                    <div class="inn-info-text inn-info-text__value"> 420000, Респ Татарстан, г Казань </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="">Электронный документооборот</label>
+                        <select class="select" name="" id="">
+                            <option value="">Тензор (СБИС)</option>
+                        </select>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="2BE396286aa20a046f5b194aa55226ea6e1" type="text">
+                            <label class="label" for="">ID</label>
+                        </div>
+                        <p class="settings__p"> Доверенность </p>
+                        <div class="uploader-wrapper wide">
+                            <div class="input-wrapper_file">
+                                <div class="input-wrapper__placeholder">
+                                    <div class="input-wrapper__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#c4c9d4" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2804 4.78033C12.5733 4.48744 12.5733 4.01256 12.2804 3.71967C11.9875 3.42678 11.5126 3.42678 11.2197 3.71967L8.00003 6.93934L4.78036 3.71967C4.48747 3.42678 4.01259 3.42678 3.7197 3.71967C3.42681 4.01256 3.42681 4.48744 3.7197 4.78033L6.93937 8L3.7197 11.2197C3.42681 11.5126 3.42681 11.9874 3.7197 12.2803C4.01259 12.5732 4.48747 12.5732 4.78036 12.2803L8.00003 9.06066L11.2197 12.2803C11.5126 12.5732 11.9875 12.5732 12.2804 12.2803C12.5733 11.9874 12.5733 11.5126 12.2804 11.2197L9.06069 8L12.2804 4.78033Z" fill="black"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="input-wrapper__text">
+                                        Прикрепить<br>Файл
+                                    </div>
+                                </div>
+                                <input class="input_file" type="file">
+                            </div>
+                        </div>
+                        <p class="settings__p required">  Уведомление или свидетельство о регистрации в качестве ИП  </p>
+                        <div class="files-list">
+                            <div class="files-list__item">
+                                <div class="files-list__title">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2V8C12 9.10457 12.8954 10 14 10H20V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2H12ZM13.5 2.5V8C13.5 8.27614 13.7239 8.5 14 8.5H19.5L13.5 2.5Z" fill="#C4C9D4"></path>
+                                    </svg>
+                                    Загруженный файл 1
+                                </div>
+                                <div class="files-list__actions">
+                                    <a class="files-list__link" href="">Скачать файл</a>
+                                    <a class="files-list__link" href="">Удалить</a>
+                                </div>
+                            </div>
+                            <div class="uploader-wrapper wide">
+                                <div class="input-wrapper_file">
+                                    <div class="input-wrapper__placeholder">
+                                        <div class="input-wrapper__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#c4c9d4" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2804 4.78033C12.5733 4.48744 12.5733 4.01256 12.2804 3.71967C11.9875 3.42678 11.5126 3.42678 11.2197 3.71967L8.00003 6.93934L4.78036 3.71967C4.48747 3.42678 4.01259 3.42678 3.7197 3.71967C3.42681 4.01256 3.42681 4.48744 3.7197 4.78033L6.93937 8L3.7197 11.2197C3.42681 11.5126 3.42681 11.9874 3.7197 12.2803C4.01259 12.5732 4.48747 12.5732 4.78036 12.2803L8.00003 9.06066L11.2197 12.2803C11.5126 12.5732 11.9875 12.5732 12.2804 12.2803C12.5733 11.9874 12.5733 11.5126 12.2804 11.2197L9.06069 8L12.2804 4.78033Z" fill="black"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="input-wrapper__text">
+                                            Прикрепить<br>Файл
+                                        </div>
+                                    </div>
+                                    <input class="input_file" type="file">
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="settings__h3">Расчетные счета</h3>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="45645646" type="text">
+                            <label class="label required" for="">Бик банка</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="4545645654546" type="text">
+                            <label class="label required" for="">Номер расчетного счета</label>
+                        </div>
+                        <div class="input-wrapper filled">
+                            <input class="input" placeholder="РАйфф" type="text">
+                            <label class="label required" for="">Название счета</label>
+                        </div>
+                        <button class="settings-btn">Сохранить</button>
                     </form>
                 </div>
             </div>

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/datepicker.material.css">
 </head>
 <body>
     <header class="header">
@@ -141,73 +140,60 @@
         </nav>
     </header>
     <main>
-        <h1 class="text-h1">Список отчетов</h1>
-        <div class="report">
-            <div class="form-field">
-                <div class="field">
-                    <label class="label">Выберите период </label>
-                    <button class="wrapper" id="multi">
-                        <div class="pop-up">
-                            <span class="control-input first-date">27 нояб. 2022</span>
+        <div class="container">
+            <div class="settings-wrapper">
+                <nav class="settings-nav">
+                    <div class="title">Настройки</div>
+                    <ul class="settings-nav__list">
+                        <li class="settings-nav__list-title">Управление аккаунтом</li>
+                        <li class="settings-nav__item selected"><a href="settings.html">Учетная запись</a></li>
+                        <li class="settings-nav__item"><a href="settings_profile.html">Профиль</a></li>
+                        <li class="settings-nav__item"><a href="settings_account.html">Аккаунт</a></li>
+                    </ul>
+                    <ul class="settings-nav__list">
+                        <li class="settings-nav__list-title">Настройки магазина</li>
+                        <li class="settings-nav__item"><a href="settings_design.html">Дизайн</a></li>
+                        <li class="settings-nav__item"><a href="settings_shop.html">Настройки магазина</a></li>
+                    </ul>
+                </nav>
+                <div class="settings-content">
+                    <div class="title">Учётная запись</div>
+                    <form class="settings-form" action="">
+                        <h3 class="product-form__h3"> АВАТАР МАГАЗИНА - отображается в чате с клиентом (Рекомендуемый формат - PNG, 500х500) </h3>
+                        <div class="uploader-wrapper">
+                            <div class="input-wrapper_file">
+                                <div class="input-wrapper__placeholder">
+                                    <div class="input-wrapper__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#c4c9d4" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2804 4.78033C12.5733 4.48744 12.5733 4.01256 12.2804 3.71967C11.9875 3.42678 11.5126 3.42678 11.2197 3.71967L8.00003 6.93934L4.78036 3.71967C4.48747 3.42678 4.01259 3.42678 3.7197 3.71967C3.42681 4.01256 3.42681 4.48744 3.7197 4.78033L6.93937 8L3.7197 11.2197C3.42681 11.5126 3.42681 11.9874 3.7197 12.2803C4.01259 12.5732 4.48747 12.5732 4.78036 12.2803L8.00003 9.06066L11.2197 12.2803C11.5126 12.5732 11.9875 12.5732 12.2804 12.2803C12.5733 11.9874 12.5733 11.5126 12.2804 11.2197L9.06069 8L12.2804 4.78033Z" fill="black"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="input-wrapper__text">
+                                        Добавить<br>Фото
+                                    </div>
+                                </div>
+                                <input class="input_file" type="file">
+                            </div>
                         </div>
-                        <span class="separator">–</span>
-                        <div class="pop-up">
-                            <span class="control-input last-date">27 нояб. 2022</span>
+                        <h3 class="product-form__h3"> ЗАГРУЗИТЕ ОБЛОЖКУ (Рекомендуемый формат - PNG, от 1240х200 до 4960х800) </h3>
+                        <div class="uploader-wrapper">
+                            <div class="input-wrapper_file">
+                                <div class="input-wrapper__placeholder">
+                                    <div class="input-wrapper__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#c4c9d4" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2804 4.78033C12.5733 4.48744 12.5733 4.01256 12.2804 3.71967C11.9875 3.42678 11.5126 3.42678 11.2197 3.71967L8.00003 6.93934L4.78036 3.71967C4.48747 3.42678 4.01259 3.42678 3.7197 3.71967C3.42681 4.01256 3.42681 4.48744 3.7197 4.78033L6.93937 8L3.7197 11.2197C3.42681 11.5126 3.42681 11.9874 3.7197 12.2803C4.01259 12.5732 4.48747 12.5732 4.78036 12.2803L8.00003 9.06066L11.2197 12.2803C11.5126 12.5732 11.9875 12.5732 12.2804 12.2803C12.5733 11.9874 12.5733 11.5126 12.2804 11.2197L9.06069 8L12.2804 4.78033Z" fill="black"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="input-wrapper__text">
+                                        Добавить<br>Фото
+                                    </div>
+                                </div>
+                                <input class="input_file" type="file">
+                            </div>
                         </div>
-                    </button>
+                        <button class="settings-btn" style="margin-top: 10px;">Сохранить</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        <div class="sort-header ascending">
-                            <span> Период </span>
-                           <img src="../../img/arrow.svg" alt="">
-                        </div>
-                    </th>
-                    <th>
-                        <div class="sort-header">
-                            <span> Заказы </span>
-                           <img src="../../img/arrow.svg" alt="">
-                        </div>
-                    </th>
-                    <th>
-                        Возвраты
-                    </th>
-                    <th>
-                        Комиссия
-                    </th>
-                    <th>
-                        Доп. услуги
-                    </th>
-                    <th>
-                        Стоимость логистики
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="empty" colspan="6">Нет записей</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="pagination-table">
-            <div class="per-page">
-                <div>Кол-во строк:</div>
-                <select>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                </select>
             </div>
         </div>
     </main>
@@ -222,26 +208,5 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        var date;
-        var multi = new Datepicker('#multi', {
-            multiple: true
-        });
-        function dateChange (id) {
-            try {
-                var dates = $(id).attr("data-value").split(',')
-                $(id).find(".first-date").text(dates[0]);
-                $(id).find(".last-date").text(dates[dates.length - 1]);
-            } catch (err) {
-                console.log("Date change error")
-            }
-        };
-        $("#multi").click(function(){
-            dateChange("#multi");
-        });
-    </script>
 </body>
 </html>
