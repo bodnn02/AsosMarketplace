@@ -35,3 +35,15 @@ $(".m-menu__header").click(function (e) {
         $(".m-menu").removeClass("opened");
     }
 });
+$(".product-card").click(function(e) {
+    $(".overlay").addClass("opened");
+    $(".product-overlay").addClass("opened");
+});
+$(".sidebar-overlay > .close").click(function(e) {
+    $(".overlay").removeClass("opened");
+    $(this).parent().removeClass("opened");
+});
+$("#employers-add").click(function(e) {
+    $(".overlay").addClass("opened");
+    $(".employers-overlay").addClass("opened");
+});
